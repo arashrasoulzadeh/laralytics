@@ -1,0 +1,17 @@
+{
+    "name": "arashrasoulzadeh/laralytics",
+    "description": "Laravel Analytics",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Arashrasoulzadeh\\Laralytics\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Arash Rasoulzadeh",
+            "email": "arashrasoulzadeh@gmail.com"
+        }
+    ],
+    "require": {}
+}
