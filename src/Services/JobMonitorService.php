@@ -4,7 +4,7 @@ namespace arashrasoulzadeh\Laralytics\Services;
 
 class JobMonitorService
 {
-    private var $presenters = [];
+    private $presenters = [];
 
     /**
      * @return array
