@@ -1,8 +1,8 @@
 <?php
 
-namespace Arashrasoulzadeh\Laralytics\Http\Controllers;
+namespace arashrasoulzadeh\Laralytics\Http\Controllers;
 
-use ArashRasoulzadeh\Laralytics\Services\JobMonitorService;
+use arashrasoulzadeh\Laralytics\Services\JobMonitorService;
 
 class LaralyticsPrometheusController
 {

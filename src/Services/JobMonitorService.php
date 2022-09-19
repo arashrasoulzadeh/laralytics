@@ -1,6 +1,6 @@
 <?php
 
-namespace ArashRasoulzadeh\Laralytics\Services;
+namespace arashrasoulzadeh\Laralytics\Services;
 
 class JobMonitorService
 {

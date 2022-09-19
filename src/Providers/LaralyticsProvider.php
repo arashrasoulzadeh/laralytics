@@ -1,6 +1,6 @@
 <?php
 
-namespace ArashRasoulzadeh\Laralytics\Providers;
+namespace arashrasoulzadeh\Laralytics\Providers;
 use Illuminate\Support\ServiceProvider;
 
 class LaralyticsProvider extends ServiceProvider
