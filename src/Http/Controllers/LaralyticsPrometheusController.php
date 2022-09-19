@@ -11,7 +11,7 @@ class LaralyticsPrometheusController
     {
         $presenters = config( 'laralytics.prometheus.presenters');
         foreach ($presenters as $presenter){
-            $laralyticsService->addPresenter( $presenter );
+            $laralyticsService->addPresenter( new $presenter );
         }
         return $laralyticsService->present();
     }
