@@ -2,13 +2,15 @@
 
 namespace arashrasoulzadeh\Laralytics\Http\Controllers;
 
-use arashrasoulzadeh\Laralytics\Services\JobMonitorService;
+use arashrasoulzadeh\Laralytics\Presenters\SamplePresenter;
+use arashrasoulzadeh\Laralytics\Services\LaralyticsService;
 
 class LaralyticsPrometheusController
 {
-    public function present(JobMonitorService  $jobMonitorService)
+    public function present( LaralyticsService $laralyticsService )
     {
-        return $jobMonitorService->present();
+        $laralyticsService->addPresenter( new SamplePresenter() );
+        return $laralyticsService->present();
     }
 
 }

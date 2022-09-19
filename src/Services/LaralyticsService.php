@@ -4,7 +4,7 @@ namespace arashrasoulzadeh\Laralytics\Services;
 
 use arashrasoulzadeh\Laralytics\Abstracts\PresenterAbstract;
 
-class JobMonitorService
+class LaralyticsService
 {
     private $presenters = [];
 
