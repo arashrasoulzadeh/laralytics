@@ -2,6 +2,8 @@
 
 namespace arashrasoulzadeh\Laralytics\Services;
 
+use arashrasoulzadeh\Laralytics\Abstracts\PresenterAbstract;
+
 class JobMonitorService
 {
     private $presenters = [];
@@ -17,25 +19,24 @@ class JobMonitorService
     /**
      * @param array $presenters
      */
-    public function setPresenters( $presenters )
+    public function setPresenters( array $presenters )
     {
         $this->presenters = $presenters;
     }
 
     /**
-     * @param array $presenter
+     * @param PresenterAbstract $presenter
      */
-    public function addPresenter( $presenter )
+    public function addPresenter( PresenterAbstract $presenter )
     {
         $this->presenters[] = $presenter;
     }
 
-    public  function present()
+    public function present()
     {
         $response = '';
-        foreach ( $this->getPresenters() as $presenter )
-        {
-            $response.=$presenter.'\n';
+        foreach ( $this->getPresenters() as $presenter ) {
+            $response .= $presenter->title() . '=' . $presenter->value() . '\n';
         }
         return $response;
     }
