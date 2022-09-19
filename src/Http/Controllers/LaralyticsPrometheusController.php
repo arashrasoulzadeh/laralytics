@@ -9,7 +9,10 @@ class LaralyticsPrometheusController
 {
     public function present( LaralyticsService $laralyticsService )
     {
-        $laralyticsService->addPresenter( new SamplePresenter() );
+        $presenters = config( 'laralytics.prometheus.presenters');
+        foreach ($presenters as $presenter){
+            $laralyticsService->addPresenter( $presenter );
+        }
         return $laralyticsService->present();
     }
 
