@@ -36,7 +36,7 @@ class LaralyticsService
     {
         $response = '';
         foreach ( $this->getPresenters() as $presenter ) {
-            $response .= $presenter->title() . '=' . $presenter->value() . "/n";
+            $response .= $presenter->title() . '=' . $presenter->value() . "\n";
         }
         return $response;
     }
