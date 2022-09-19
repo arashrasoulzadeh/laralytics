@@ -13,7 +13,7 @@ class LaralyticsPrometheusController
         foreach ( $presenters as $presenter ) {
             $laralyticsService->addPresenter( new $presenter );
         }
-        return response()->setContent( $laralyticsService->present() )->header( 'content/type', 'text/plain' );
+        return response( $laralyticsService->present() )->header( 'content/type', 'text/plain' );
     }
 
 }
