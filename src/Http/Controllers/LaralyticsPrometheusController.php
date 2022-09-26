@@ -7,8 +7,9 @@ use arashrasoulzadeh\Laralytics\Services\LaralyticsService;
 
 class LaralyticsPrometheusController
 {
-    public function present( LaralyticsService $laralyticsService )
+    public function present()
     {
+        $laralyticsService = new LaralyticsService();
         $presenters = config( 'laralytics.prometheus.presenters' );
         foreach ( $presenters as $presenter ) {
             $laralyticsService->addPresenter( new $presenter );
